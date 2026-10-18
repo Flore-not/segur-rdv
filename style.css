@@ -81,6 +81,21 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0}
 .grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
 footer.pied{padding-top:40px;padding-bottom:64px}
 footer.pied .g{border-top:1px solid var(--trait);padding-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;font-size:15px;line-height:1.55;color:var(--gris2)}
+/* grand écran : titre à gauche, recherche à droite, pour tenir sur un écran */
+@media (min-width:1100px){
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);column-gap:48px;row-gap:10px;align-content:center}
+  .hero .wrap > *{grid-column:1}
+  .hero .wrap > .recherche,.hero .wrap > .puces,.hero .wrap > .resultat,.hero .wrap > .note{grid-column:2}
+  .hero .wrap > .surtitre{grid-row:1}
+  .hero .wrap > h1{grid-row:2}
+  .hero .wrap > p.intro{grid-row:3 / span 2;align-self:start}
+  .hero .wrap > .recherche{grid-row:1 / span 2;align-self:end;margin-top:0}
+  .hero .wrap > .puces{grid-row:3}
+  .hero .wrap > .resultat{grid-row:4}
+  .hero .wrap > .note{grid-row:5}
+  .hero h1{font-size:38px}
+  .hero p.intro{font-size:16px}
+}
 /* téléphone */
 @media (max-width:640px){
   .wrap{padding-left:20px;padding-right:20px}
