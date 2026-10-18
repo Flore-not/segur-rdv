@@ -1,0 +1,118 @@
+:root{
+  --petrole:#1F5C63;--petrole-fonce:#164448;--encre:#1C2B2D;--gris:#4A5A5C;--gris2:#3E4D4F;
+  --fond:#F5F7F6;--trait:#DDE5E4;
+  --irise-pale:linear-gradient(115deg,#E2E0DB 0%,#EFE2D8 12%,#EDE4D1 24%,#CFE4D5 38%,#D3E7E8 50%,#C9D1DB 62%,#D7D0DE 74%,#E6D6D9 86%,#E2E0DB 100%);
+  --irise:linear-gradient(115deg,#E8C9B5,#E6D9A8,#A9D6BC,#A3D3D6,#A9B4D6,#C3B2D6,#DDB3C2);
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Source Sans 3','Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);font-family:var(--sans);color:var(--encre)}
+a{color:var(--petrole)}a:hover{color:var(--petrole-fonce)}
+a.btn:hover,a.lien:hover{box-shadow:0 0 0 3px #FFFFFF,0 0 0 6px #C3B2D6}
+.sr{position:absolute;left:-9999px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:32px;padding-right:32px}
+header.top{background:#FFFFFF;border-bottom:4px solid transparent;border-image:var(--irise) 1}
+header.top .wrap{padding-top:14px;padding-bottom:14px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+header.top img{height:64px;width:auto;display:block}
+header.top .adr{font-size:15px;color:var(--gris)}
+header.top a.lien{font-size:15px;font-weight:600;text-decoration:none}
+h1,h2{font-family:var(--serif);font-weight:600;margin:0}
+.filet{width:56px;height:4px;border-radius:2px;background:var(--irise)}
+.titre{display:flex;flex-direction:column;gap:8px}
+.titre h2{font-size:36px}
+.btn{display:inline-block;text-align:center;text-decoration:none;font-weight:600;font-size:15px;padding:12px 18px;border-radius:10px;background:var(--petrole);color:#FFFFFF}
+.btn:hover{color:#FFFFFF}
+.btn.contour{background:transparent;color:var(--petrole);border:1px solid var(--petrole);padding:11px 17px}
+.btn.blanc{background:#FFFFFF;color:var(--petrole)}
+.btn.blanc-contour{background:transparent;color:#FFFFFF;border:1px solid #FFFFFF;padding:11px 17px}
+/* recherche */
+.recherche{background:#FFFFFF;border:1px solid var(--trait);border-radius:14px;padding:8px 8px 8px 20px;display:flex;align-items:center;gap:12px;max-width:760px}
+.recherche input{flex:1;min-width:0;border:0;outline:none;font-family:inherit;font-size:18px;color:var(--encre);padding:14px 0;background:transparent}
+.puces{display:flex;flex-wrap:wrap;gap:8px;max-width:760px}
+.puces button{font-family:inherit;font-size:14px;color:var(--petrole);background:#FFFFFF;border:1px solid #9FB9BB;border-radius:999px;padding:8px 14px;min-height:40px;cursor:pointer}
+.puces button:hover{background:var(--irise-pale)}
+.resultat{background:#FFFFFF;border:1px solid #D5DCE0;border-radius:10px;padding:14px 18px;max-width:760px;font-size:16px;line-height:1.5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.resultat strong{color:var(--petrole)}
+.resultat .btn[hidden]{display:none}
+.note{margin:0;font-size:14px;color:var(--gris2);max-width:760px}
+/* accueil */
+.hero{background:var(--irise-pale)}
+.hero .wrap{padding-top:72px;padding-bottom:80px;display:flex;flex-direction:column;gap:20px}
+.surtitre{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--petrole)}
+.hero h1{font-size:56px;line-height:1.05}
+.hero p.intro{margin:0;font-size:19px;line-height:1.55;max-width:680px;color:#2E3D3F}
+.hero .recherche{border:0;margin-top:12px}
+.equipe{padding-top:64px;padding-bottom:24px;display:flex;flex-direction:column;gap:28px}
+.cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.carte{background:#FFFFFF;border:1px solid var(--trait);border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.portrait,.initiales{width:112px;height:112px;border-radius:50%;border:3px solid transparent}
+.portrait{object-fit:cover;background:linear-gradient(#FFFFFF,#FFFFFF) padding-box,var(--irise) border-box}
+.initiales{background:linear-gradient(var(--petrole),var(--petrole)) padding-box,var(--irise) border-box;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:40px;letter-spacing:.04em;color:#FFFFFF}
+.carte .nom{font-family:var(--serif);font-weight:600;font-size:25px;line-height:1.15}
+.carte .qualite{font-size:15px;color:var(--gris)}
+.carte .ligne{font-size:14px;line-height:1.5;color:var(--gris);min-height:42px}
+.carte .btn{margin-top:auto;width:100%;font-size:16px;padding:13px 16px}
+.infos{padding-top:40px;padding-bottom:72px}
+.infos .boite{background:#FFFFFF;border:1px solid var(--trait);border-radius:16px;padding:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.infos .lab{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--petrole);font-weight:600;margin-bottom:6px}
+.infos .val{font-size:17px;line-height:1.5}
+.infos .val.petit{font-size:16px;color:var(--gris)}
+/* page de Flore */
+.profil{background:#FFFFFF;border-bottom:1px solid var(--trait)}
+.profil .wrap{padding-top:48px;padding-bottom:48px;display:flex;flex-wrap:wrap;align-items:center;gap:40px}
+.profil .portrait{width:168px;height:168px;border-width:4px;flex:none}
+.profil .txt{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.profil h1{font-size:50px;line-height:1.05}
+.profil .qual{font-size:18px;color:var(--petrole);font-weight:600}
+.profil p{margin:0;font-size:18px;line-height:1.6;color:var(--gris2);max-width:640px}
+.bloc{padding-top:36px;padding-bottom:8px;display:flex;flex-direction:column;gap:20px}
+.bloc.rech{padding-top:40px;gap:12px}
+.vedette{background:var(--petrole);color:#FFFFFF;border-radius:18px;box-shadow:0 0 0 4px #FFFFFF,0 0 0 8px #CFE4D5;padding:32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;margin-top:28px}
+.vedette .surtitre{color:#E9DCC3;font-size:13px}
+.vedette .t{font-family:var(--serif);font-weight:600;font-size:34px}
+.vedette .d{font-size:16px;line-height:1.55;color:#EAF1F0}
+.vedette .g{flex:1 1 480px;display:flex;flex-direction:column;gap:8px}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.motif{background:#FFFFFF;border:2px solid var(--trait);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.motif.large{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:24px}
+.motif.vu{border-color:var(--petrole)}
+.motif .n{font-weight:600;font-size:19px}
+.motif .s{font-size:14px;color:var(--gris);line-height:1.55}
+.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+footer.pied{padding-top:40px;padding-bottom:64px}
+footer.pied .g{border-top:1px solid var(--trait);padding-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;font-size:15px;line-height:1.55;color:var(--gris2)}
+/* téléphone */
+@media (max-width:640px){
+  .wrap{padding-left:20px;padding-right:20px}
+  header.top img{height:48px}
+  header.top .adr{font-size:13px;text-align:right}
+  .hero .wrap{padding-top:36px;padding-bottom:32px;gap:16px}
+  .hero h1{font-size:36px;line-height:1.08}
+  .hero p.intro{font-size:16px}
+  .recherche{padding:4px 6px 4px 14px}
+  .recherche input{font-size:16px}
+  .titre h2{font-size:28px}
+  .equipe{padding-top:32px}
+  .cartes{grid-template-columns:1fr;gap:18px}
+  .infos .boite{padding:22px}
+  .profil .wrap{flex-direction:column;text-align:center;gap:16px;padding-top:28px;padding-bottom:28px}
+  .profil .portrait{width:120px;height:120px}
+  .profil .txt{flex:none;align-items:center}
+  .profil h1{font-size:34px}
+  .profil p{font-size:16px}
+  .vedette{padding:22px;flex-direction:column;align-items:stretch}
+  .vedette .g{flex:none}
+  .vedette .t{font-size:27px}
+  .vedette .actions .btn{flex:1}
+  .grille{grid-template-columns:1fr}
+  .motif .actions .btn{flex:1}
+  .actions{flex-wrap:nowrap;gap:8px}
+  .actions .btn{font-size:14px;padding:12px 6px;white-space:nowrap}
+  .actions .btn.contour,.actions .btn.blanc-contour{padding:11px 5px}
+  .motif.large{flex-direction:column;align-items:stretch}
+  .motif.large > div{flex:none !important}
+  .recherche{flex-wrap:wrap}
+  .recherche input{flex:1 1 200px}
+  .recherche button{flex:1 1 100%;margin:0 0 4px;padding:12px 14px !important;font-size:15px !important}
+  header.top a.lien{font-size:14px}
+}
