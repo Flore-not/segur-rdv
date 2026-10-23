@@ -7,11 +7,10 @@
     { id: 'mariage', nom: 'Contrat de mariage ou PACS', k: ['mariage', 'pacs', 'regime'] },
     { id: 'donation', nom: 'Donation, transmission et organisation du patrimoine', k: ['donation', 'donner', 'transmission', 'patrimoine'] },
     { id: 'succession', nom: 'Ouverture de succession', k: ['succession', 'deces', 'heritage', 'heritier'] },
-    { id: 'signature', nom: "Signature (date déjà convenue avec l'étude)", k: ['signature', 'signer'] },
     { id: 'suivi', nom: 'Suivi de dossier', k: ['suivi', 'dossier en cours'] }
   ];
   var DEFAUT = { id: 'renseignements', nom: 'Premier rendez-vous, renseignements (45 minutes, à l’étude ou en visioconférence)' };
-  var MOTS = ['achat', 'vente', 'donation', 'succession', 'testament', 'divorce', 'mariage', 'PACS', 'signature'];
+  var MOTS = ['achat', 'vente', 'donation', 'succession', 'testament', 'divorce', 'mariage', 'PACS'];
 
   function norm(s) { return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim(); }
   function trouver(q) {
@@ -52,8 +51,8 @@
       if (mode === 'flore') {
         var carte = document.getElementById(r.id);
         if (carte) carte.classList.add('vu');
-        lien.href = bookings; lien.target = '_blank'; lien.rel = 'noopener';
-        lien.textContent = 'Réserver ce rendez-vous';
+        lien.href = '#' + r.id; lien.removeAttribute('target');
+        lien.textContent = 'Voir ce motif';
       } else {
         lien.href = 'flore.html#' + r.id; lien.removeAttribute('target');
         lien.textContent = 'Voir ce motif';
